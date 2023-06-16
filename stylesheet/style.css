@@ -1,0 +1,114 @@
+body {
+    scroll-behavior: smooth;
+}
+
+.blog-icon {
+    font-size: 2.2rem;
+    float: left;
+    margin-right: 12px;
+}
+
+.navbar {
+    color: white;
+    background: #6a11cb;
+    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 0.9), rgba(37, 117, 252, 0.9));
+    background: linear-gradient(to right, rgba(106, 17, 203, 0.9), rgba(37, 117, 252, 0.9));
+}
+
+#carouselExampleAutoplaying img {
+    height: 92vh;
+}
+
+.container h4 {
+    color: #6a11cb;
+}
+
+.underline {
+    width: 10%;
+    height: 4px;
+    background-color: #6a11cb;
+    color: #6a11cb;
+}
+
+#NewsFeed hr {
+    transition: 1.2s;
+}
+#NewsFeed:hover hr {
+    width: 100%;
+}
+
+#UpcomingEvents hr {
+    transition: 2s;
+}
+
+#UpcomingEvents:hover hr {
+    width: 100%;
+}
+
+#Jobs hr {
+    transition: 2s;
+}
+
+#Jobs:hover hr {
+    width: 100%;
+}
+
+section {
+    margin-top: 2.5%;
+}
+
+section i {
+    float: left;
+    margin: 6px 8px 0 0;
+    font-size: 1.25rem;
+    color: #6a11cb;
+}
+
+section .container {
+    margin-top: 2%;
+}
+
+.blog a {
+    text-decoration: none;
+    overflow: hidden;
+}
+
+section .sub-segment-header {
+    color: rgba(37, 117, 252);
+    text-transform: uppercase;
+}
+
+footer {
+    height: 35vh;
+    overflow: hidden;
+    color: white;
+    background: rgba(37, 117, 252, 0.9);
+    background: -webkit-linear-gradient(to left, rgba(106, 17, 203, 0.9), rgba(37, 117, 252, 0.9));
+    background: linear-gradient(to left, rgba(106, 17, 203, 0.9), rgba(37, 117, 252, 0.9));
+}
+
+.copyright {
+    color: white;
+    letter-spacing: 8px;
+}
+
+.footer-head {
+    font-size: 1.5rem;
+}
+
+footer hr {
+    color: white;
+    background-color: white;
+    margin: auto;
+    width: 30%;
+    height: 2px;
+    margin-top: 1.5%;
+    margin-bottom: 2%;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+}

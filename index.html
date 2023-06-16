@@ -1,0 +1,2461 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Manik">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blogging Website</title>
+
+        <link rel="stylesheet" href="stylesheet/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            crossorigin="anonymous"></script>
+
+        <script src="scripts/script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+            integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body>
+
+        <nav class="navbar bg-dark sticky-top navbar-expand-lg bg-body-tertiary border-bottom border-bottom-dark" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <i class="fa-solid fa-blog blog-icon"></i>
+                    <h3 class="Heading">Blogging Website</h3>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-5 me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#NewsFeed">News Feed</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#UpcomingEvents">Upcoming events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Jobs">Jobs</a>
+                        </li>
+                    </ul>
+                    <form onsubmit="Search()" class="d-flex" role="search">
+                        <input class="form-control me-2" id="search-text" type="search" placeholder="Hint: News, Events, Jobs, Feed" aria-label="Search">
+                        <button class="btn btn-light" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="Images/NewsFeed.jpg" class="d-block w-100" alt="Carousel Image 1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>News Feed</h5>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Images/Events.jpg" class="d-block w-100" alt="Carousel Image 2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Upcoming Events</h5>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Images/Jobs.jpg" class="d-block w-100" alt="Carousel Image 3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Jobs</h5>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        
+        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="container mt-3 scrollspy-example " tabindex="0">
+            <section>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+                unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </section>
+
+            <section id="NewsFeed">
+                <i class="fa-solid fa-newspaper"></i><h4>News Feed</h4>
+                <hr class="underline" />
+                <div class="mb-4">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                    dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                    book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+                    unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                    recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </div>
+                <div class="container text-center">
+                    <div class="mb-4 display-6 sub-segment-header">Software Development</div>
+                    <div class="">
+                        <div class="row blog">
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="img-fluid rounded-start" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container text-center">
+                    <div class="mb-4 display-6 sub-segment-header">Information Technology</div>
+                    <div class="">
+                        <div class="row blog">
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="img-fluid rounded-start" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container text-center">
+                    <div class="mb-4 display-6 sub-segment-header">Electronics</div>
+                    <div class="">
+                        <div class="row blog">
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="img-fluid rounded-start" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container text-center">
+                    <div class="mb-4 display-6 sub-segment-header">Artificial Intelligence</div>
+                    <div class="">
+                        <div class="row blog">
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="img-fluid rounded-start" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container text-center">
+                    <div class="mb-4 display-6 sub-segment-header">Humans v/s AI</div>
+                    <div class="">
+                        <div class="row blog">
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="img-fluid rounded-start" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container text-center">
+                    <div class="mb-4 display-6 sub-segment-header">ChatGPT v/s Bard</div>
+                    <div class="">
+                        <div class="row blog">
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="img-fluid rounded-start" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="UpcomingEvents">
+                <i class="fa-solid fa-calendar-days"></i><h4>Upcoming Events</h4>
+                <hr class="underline" />
+                <div class="mb-4">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                    standard
+                    dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                    specimen
+                    book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+                    unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
+                    more
+                    recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </div>
+                <div class="container text-center">
+                    <div class="mb-4 display-6 sub-segment-header">Cloud Workshops</div>
+                    <div class="">
+                        <div class="row blog">
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="img-fluid rounded-start" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container text-center">
+                    <div class="mb-4 display-6 sub-segment-header">Development Master Class</div>
+                    <div class="">
+                        <div class="row blog">
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="img-fluid rounded-start" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container text-center">
+                    <div class="mb-4 display-6 sub-segment-header">Data Structures & Algorithms</div>
+                    <div class="">
+                        <div class="row blog">
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="img-fluid rounded-start" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container text-center">
+                    <div class="mb-4 display-6 sub-segment-header">Python Development</div>
+                    <div class="">
+                        <div class="row blog">
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="img-fluid rounded-start" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container text-center">
+                    <div class="mb-4 display-6 sub-segment-header">Developer: Beginner to Advanced</div>
+                    <div class="">
+                        <div class="row blog">
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="img-fluid rounded-start" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="Jobs">
+                <i class="fa-solid fa-user-tie"></i><h4>Jobs</h4>
+                <hr class="underline" />
+                <div class="mb-4">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                    standard
+                    dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                    specimen
+                    book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+                    unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
+                    more
+                    recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </div>
+                <div class="container text-center">
+                    <div class="mb-4 display-6 sub-segment-header">Software Development Engineer</div>
+                    <div class="">
+                        <div class="row blog">
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="img-fluid rounded-start" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container text-center">
+                    <div class="mb-4 display-6 sub-segment-header">Cyber Security & Network Analyst</div>
+                    <div class="">
+                        <div class="row blog">
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="img-fluid rounded-start" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container text-center">
+                    <div class="mb-4 display-6 sub-segment-header">Data Science</div>
+                    <div class="">
+                        <div class="row blog">
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="img-fluid rounded-start" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container text-center">
+                    <div class="mb-4 display-6 sub-segment-header">AI & ML</div>
+                    <div class="">
+                        <div class="row blog">
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="img-fluid rounded-start" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container text-center">
+                    <div class="mb-4 display-6 sub-segment-header">ASP.NET Developer</div>
+                    <div class="">
+                        <div class="row blog">
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="img-fluid rounded-start" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container text-center">
+                    <div class="mb-4 display-6 sub-segment-header">Node.js</div>
+                    <div class="">
+                        <div class="row blog">
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="img-fluid rounded-start" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container text-center">
+                    <div class="mb-4 display-6 sub-segment-header">Java Spring Boot</div>
+                    <div class="">
+                        <div class="row blog">
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="img-fluid rounded-start" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="col-lg-4 col-md-6 col-sm-12 mb-5" href="#">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-5">
+                                            <img src="Images/BlogImage.jpg" class="rounded-start" height="100%" width="100%" alt="Image">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                                    lead-in to
+                                                    additional
+                                                    content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="text-center">
+            <div class="copyright">© Copyright 2023</div>
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="footer-head">Featured</div>
+                    <hr height="12px" />
+                    <div><a href="#">Software Development Engineer</a></div>
+                    <div><a href="#">ChatGPT v/s Bard</a></div>
+                    <div><a href="#">Humans v/s AI</a></div>
+                    <div><a href="#">Data Science</a></div>
+                    <div><a href="#">AI & ML</a></div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="footer-head">Contact Us</div>
+                    <hr />
+                    <div><a href="#">Address: Block No. X, ABC Colony, DEF, ZXCASD, XXXXXX</a></div>                    
+                    <div><a href="#">Contact Number: XXX-XXX-XXXX, XXX-XXX-XXX</a></div>
+                    <div><a href="#">Email: abcdef.qwerty123@mno.com</a></div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
